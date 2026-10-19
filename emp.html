@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Employee - Utkrsta Apparel India</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/employees_management.css" />
+    <style>
+	/* Base Reset and Fonts */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4e54c8;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #3a3fa8;
+}
+
+/* Header */
+.header {
+  margin-left: 200px;
+  padding: 20px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 200px;
+  padding: 30px;
+  background-color: #fff;
+  min-height: calc(100vh - 100px);
+}
+
+/* Logo Section */
+.file-upload-section img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #4e54c8;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.blue {
+  background-color: #4e54c8;
+  color: white;
+  margin-top: 10px;
+}
+
+button.blue:hover {
+  background-color: #3a3fa8;
+}
+
+button.red {
+  background-color: #e74c3c;
+  color: white;
+  margin-top: 10px;
+}
+
+button.red:hover {
+  background-color: #c0392b;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #4e54c8;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-left: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .header, .main-content, .footer {
+    margin-left: 0;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../addEmployees/addEmployees.html">Add Employee</a>
+    <a href="../viewEmployees/viewEmployees.html">View Employees</a>
+    <a href="../about/about.html">About</a>
+    <a href="../index.html">Logout</a>
+  </div>
+
+  <!-- Header without logo -->
+  <div class="header">
+    <strong>New Employee Registration – Utkrsta Apparel India</strong>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    
+    <!-- Excel File Upload Section with Logo -->
+    <div class="file-upload-section" style="text-align: center;">
+      <div class="logo">
+        <!-- Company Logo in the file upload section -->
+        <img src="../assets/images/logo.png" alt="Company Logo">
+      </div>
+     </div>
+
+    <!-- Employee Form -->
+    <form id="employeeForm">
+      <div class="form-group"><label>S.NO</label><input type="number" required></div>
+      <div class="form-group"><label>EMPLOYEE CODE</label><input type="text" required></div>
+      <div class="form-group"><label>EMPLOYEE NAME</label><input type="text" required></div>
+      <div class="form-group"><label>DOB</label><input type="date" required></div>
+      <div class="form-group"><label>GENDER</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>MARITAL STATUS</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Divorced</option>
+        </select>
+      </div>
+      <div class="form-group"><label>FATHER'S NAME</label><input type="text" required></div>
+      <div class="form-group"><label>MOTHER'S NAME</label><input type="text" required></div>
+      <div class="form-group"><label>CONTACT NO</label><input type="tel" required></div>
+      <div class="form-group"><label>EMAIL ADDRESS</label><input type="email" required></div>
+      <div class="form-group"><label>LOCAL ADDRESS</label><textarea required></textarea></div>
+      <div class="form-group"><label>ADDRESS</label><textarea required></textarea></div>
+      <div class="form-group"><label>CITY</label><input type="text" required></div>
+      <div class="form-group"><label>STATE</label><input type="text" required></div>
+      <div class="form-group"><label>PIN CODE</label><input type="number" required></div>
+      <div class="form-group"><label>BANK NAME</label><input type="text" required></div>
+      <div class="form-group"><label>ACCOUNT NO</label><input type="number" required></div>
+      <div class="form-group"><label>IFSC CODE</label><input type="text" required></div>
+      <div class="form-group"><label>BRANCH ADDRESS</label><textarea required></textarea></div>
+      <div class="form-group"><label>EMERGENCY CONTACT NAME</label><input type="text" required></div>
+      <div class="form-group"><label>RELATION</label><input type="text" required></div>
+      <div class="form-group"><label>EMERGENCY CONTACT NO</label><input type="tel" required></div>
+      <div class="form-group"><label>POSITION</label><input type="text" required></div>
+      <div class="form-group"><label>DEPARTMENT</label><input type="text" required></div>
+      <div class="form-group"><label>JOINING DATE</label><input type="date" required></div>
+      <div class="form-group"><label>PAN NO</label><input type="text" required></div>
+      <div class="form-group"><label>AADHAR NO</label><input type="number" required></div>
+      <div class="form-group"><label>PASSPORT</label><input type="text" required></div>
+      <div class="form-group"><label>EXPERIENCE</label><textarea required></textarea></div>
+      <div class="form-group"><label>LEAVING DATE</label><input type="date" required></div>
+      <div class="form-group"><label>REMARKS</label><textarea required></textarea></div>
+
+	  <button type="button" class="blue" >Save Employee</button><br><br>
+      <button type="button" class="blue" onclick="updateExcel()">Update Excel</button><br><br>
+      <button type="button" class="red" onclick="createPDF()">Create PDF</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 Utkrsta Apparel India. All rights reserved.
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</body>
+</html>
